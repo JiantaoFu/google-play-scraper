@@ -5,8 +5,9 @@ import * as R from 'ramda';
 describe('Categories method', () => {
   it('should fetch valid list of categories', () => {
     return gplay.categories().then(categories => {
+      console.log(categories);
       assert.isArray(categories);
-      assert.isTrue(categories.length > 0);
+      assert.isTrue(categories.length > 1);
     });
   });
 

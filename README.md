@@ -629,3 +629,13 @@ gplay.search({term: 'panda', throttle: 10}).then(console.log);
 ```
 
 By default, no throttling is applied.
+
+## Debugging
+
+To enable detailed logging for debugging purposes, set the `DEBUG` environment variable:
+
+```bash
+DEBUG=google-play-scraper:categories node your-script.js
+```
+
+This will enable detailed logs for the `categories` method and the `extractCategories` function, helping you to debug issues with category extraction. If no categories are found, it will log a message indicating this. Additionally, it will log the type and properties of the cheerio instance `$` and the type of the response body. It will also log the entire response object for further inspection.
